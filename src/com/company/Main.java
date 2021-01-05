@@ -18,14 +18,15 @@ public class Main {
         System.out.print("\t+ Nhập năm sinh: "); int yob = nhapten.nextInt();
         System.out.print("\t+ Nhập giới tính: "); String sex = nhapten.next();
         System.out.print("\t+ Nhập chiều cao: "); float hight = nhapten.nextFloat();
-        System.out.print("\t+ Nhập quê quán: "); String tp = nhapten.nextLine();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("\t+ Nhập quê quán: "); String tp = scan.nextLine();
         System.out.print("\t+ Nhập điểm TB: "); float mark = nhapten.nextFloat();
 
         //ra kết quả
         System.out.println("Danh sách ứng viên");
         System.out.println("\tHọ tên là " + name); System.out.println("\tNgày tháng năm sinh là " + dob +"/"+mob+"/"+yob);
         System.out.println("\tGiới tính là "+sex); System.out.println("\tChiều cao là "+hight);
-        System.out.println("\tQuê quán là "+tp); System.out.println("\tMark: "+mark);
+        System.out.println("\tQuê quán là "+tp); System.out.println("\tĐiểm là: "+mark);
 
     }
 }
