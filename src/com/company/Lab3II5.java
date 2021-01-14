@@ -9,9 +9,9 @@ public class Lab3II5 {
         System.out.print("Nhập số kilômét: ");
         double km = nhap.nextFloat(); double gia = 0;
         if (km<=1){gia = 15000;
-        } else if (km<=5){gia = 15000 + 13500*(km-1);}
-        else if (km>5){gia = 15000+ 13500*4 + 11000*(km-5);}
-        else if (km>120){gia = 90/100*(15000+ 13500*4 + 11000*(km-5));}
+        } if (km<=5){gia = gia + 13500*(km-1);}
+        if (km>5){gia = gia + 11000*(km-5);}
+        if (km>120){gia = 90/100*gia;}
         System.out.printf("Giá taxi là %,.0f",gia);
     }
 }
