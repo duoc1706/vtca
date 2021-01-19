@@ -2,7 +2,7 @@ package com.company;
 
 public class SoChinhPhuong {
     public static void main(String[] args) {
-        int n = 144;
+        int n = 143;
         if (check(n)) {
             System.out.println(n + " là số chính phương"); }
         else System.out.println(n + " không phải là số chính phương");
