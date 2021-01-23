@@ -1,11 +1,27 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Mark {
     private String Tenmon;
     private float DiemLT;//điểm lý thuyết
-    float DiemTH;//điểm thực hành
+    private float DiemTH;//điểm thực hành
+    private float DiemTB;
+
+    public float getDiemTB() {
+        return DiemTB;
+    }
+
+    public void setDiemTB() {
+        DiemTB = (DiemLT + DiemTH) / 2;
+    }
+
+    public Mark(String tenmon, float diemLT, float diemTH) {
+        this.Tenmon = tenmon;
+        this.DiemLT = diemLT;
+        this.DiemTH = diemTH;
+    }
+
+    public Mark() {
+    }
 
     public String getTenmon() {
         return Tenmon;
@@ -31,16 +47,10 @@ public class Mark {
         DiemTH = diemTH;
     }
 
-    public float XuatMonHoc(float lythuyet, float thuchanh){
-        return (lythuyet+thuchanh)/2;
-    }
-    public void NhapMonHoc(String mon, float lythuyet, float thuchanh){
-        this.Tenmon=mon;
-        this.DiemLT=lythuyet;
-        this.DiemTH=thuchanh;
-        System.out.println("Môn học: "+Tenmon);
-        System.out.println("Điểm lý thuyết là: "+DiemLT);
-        System.out.println("Điểm thực hành là: "+DiemTH);
-        System.out.println("Điểm trung bình là: "+XuatMonHoc(DiemLT,DiemTH));
+    public void XuatMonHoc() {
+        System.out.println("Tên môn học: " + Tenmon);
+        System.out.println("Điểm lý thuyết: " + DiemLT);
+        System.out.println("Điểm thực hành: " + DiemTH);
+        System.out.println("Điểm trung bình: " + DiemTB);
     }
 }
