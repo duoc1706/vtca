@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Lab1;
 
 public class Product {
     private String tensanpham;
